@@ -1,7 +1,7 @@
 # Учебный проект «Угадай мелодию» [![Build status][travis-image]][travis-url]
 
 * Студент: [Александр Антонов](https://up.htmlacademy.ru/react/2/user/861509).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Тимоновский](https://htmlacademy.ru/profile/id768125).
 
 ---
 
