@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import WelcomeScreen from "./components/welcomeScreen.js";
+import App from "./components/app.js";
 
 const init = () => {
   ReactDOM.render(
-      <WelcomeScreen />,
+      <App
+        errorsCount = {3}
+        minutes = {7}
+      />,
       document.querySelector(`#root`)
   );
 };
