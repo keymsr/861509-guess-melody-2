@@ -1,25 +1,42 @@
 const questions = [
-  {
-    type: `genre`,
-    genre: `rock`,
-    answers: [
-      {
-        src: `https://******.mp3`,
-        genre: `rock`,
+  { 
+     "questionType": `performer`,
+     "track": {
+       "title": `oxygene`,
+       "performer": `Jean Michel Jarre`       
+     },
+     "answers": [
+       {
+         "titleImage": `https:\\****************.jpg`,
+         "performer": 'ABBA'
+       },
+       {
+        "titleImage": `https:\\****************.jpg`,
+        "performer": 'QUEEN'
       },
       {
-        src: `https://******.mp3`,
-        genre: `pop`,
-      },
-      {
-        src: `https://******.mp3`,
-        genre: `jazz`,
-      },
-      {
-        src: `https://******.mp3`,
-        genre: `rock`,
-      },
-    ],
+        "titleImage": `https:\\****************.jpg`,
+        "performer": 'Jean Michel Jarre'
+      },             
+     ]
   },
+  {
+    "questionType": `genre`,
+    "genre": `rock`,
+    "answers": [
+      {
+        "src": `http:\\www*************.mp3`,
+        "genre": `pop`
+      },
+      {
+        "src": `http:\\www*************.mp3`,
+        "genre": `rock`
+      },
+      {
+        "src": `http:\\www*************.mp3`,
+        "genre": `electronic`
+      },            
+    ]
+  }
 ];
 

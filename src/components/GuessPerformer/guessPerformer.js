@@ -1,6 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const GuessPerformer = (props) => {
+  const question = props.question;
+  const answers = props.answers;
+  const callback = prop.callback;
+
   return <section className="game game--artist">
     <header className="game__header">
       <a className="game__back" href="#">
@@ -64,5 +69,10 @@ const GuessPerformer = (props) => {
     </section>
   </section>;
 };
+
+GuessPerformer.propTypes = {
+  question: PropTypes.string.isRequired,
+  answers: PropTypes.arrayOf.st.isRequired,
+  callback: PropTypes.func.isRequired};
 
 export default GuessPerformer;
