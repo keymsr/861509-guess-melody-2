@@ -1,5 +1,5 @@
 const gameParams = {
-  minutes: 5,
+  minutes: 7,
   errorsCount: 3,
 };
 export default gameParams;

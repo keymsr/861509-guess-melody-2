@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App/app";
-import GameParams from "./mocks/gameParams";
-import Questions from "./mocks/questions";
+import App from "./components/App/app.jsx";
+import gameParams from "./mocks/gameParams";
+import questions from "./mocks/questions";
 
 const init = () => {
   ReactDOM.render(
       <App
-        minutes = {GameParams.minutes}
-        errorsCount = {GameParams.errorsCount}       
-        questions = {Questions} 
+        minutes = {gameParams.minutes}
+        errorsCount = {gameParams.errorsCount}
+        questions = {questions}
       />,
       document.querySelector(`#root`)
   );
