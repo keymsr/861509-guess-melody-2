@@ -1,42 +1,61 @@
 const questions = [
-  { 
-     "questionType": `performer`,
-     "track": {
-       "title": `oxygene`,
-       "performer": `Jean Michel Jarre`       
-     },
-     "answers": [
-       {
-         "titleImage": `https:\\****************.jpg`,
-         "performer": 'ABBA'
-       },
-       {
+  {
+    "questionType": `performer`,
+    "track": {
+      "title": `oxygene`,
+      "titleImage": `https:\\****************.jpg`,
+      "genre": `electronic`,
+      "performer": `Jean Michel Jarre`
+    },
+    "answers": [
+      {
+        "title": `Dansing queen`,
         "titleImage": `https:\\****************.jpg`,
-        "performer": 'QUEEN'
+        "performer": `ABBA`,
+        "genre": `pop`,
       },
       {
+        "title": `Bohemian rhapsody`,
         "titleImage": `https:\\****************.jpg`,
-        "performer": 'Jean Michel Jarre'
-      },             
-     ]
+        "performer": `QUEEN`,
+        "genre": `rock`,
+      },
+      {
+        "title": `Pipeline`,
+        "titleImage": `https:\\****************.jpg`,
+        "performer": `The Alan Parsons project`,
+        "genre": `electronic`,
+      },
+    ]
   },
   {
     "questionType": `genre`,
-    "genre": `rock`,
+    "track": {
+      "title": `oxygene`,
+      "titleImage": `https:\\****************.jpg`,
+      "genre": `electronic`,
+      "performer": `Jean Michel Jarre`
+    },
     "answers": [
       {
-        "src": `http:\\www*************.mp3`,
-        "genre": `pop`
+        "title": `Dansing queen`,
+        "titleImage": `https:\\****************.jpg`,
+        "performer": `ABBA`,
+        "genre": `pop`,
       },
       {
-        "src": `http:\\www*************.mp3`,
-        "genre": `rock`
+        "title": `Bohemian rhapsody`,
+        "titleImage": `https:\\****************.jpg`,
+        "performer": `QUEEN`,
+        "genre": `rock`,
       },
       {
-        "src": `http:\\www*************.mp3`,
-        "genre": `electronic`
-      },            
+        "title": `Pipeline`,
+        "titleImage": `https:\\****************.jpg`,
+        "performer": `The Alan Parsons project`,
+        "genre": `electronic`,
+      },
     ]
-  }
+  },
 ];
 

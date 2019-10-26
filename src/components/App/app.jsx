@@ -13,8 +13,8 @@ class App extends React.PureComponent {
       return <WelcomeScreen
         minutes={minutes}
         errorsCount={errorsCount}
-    />;
-
+        onStartButtonClick={userAnserwCallback}
+      />;
     }
   }
 }
