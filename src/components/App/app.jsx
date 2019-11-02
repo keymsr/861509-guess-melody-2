@@ -1,21 +1,30 @@
 import React from "react";
+import {PureComponent} from "react"
 import PropTypes from "prop-types";
 import WelcomeScreen from "../WelcomeScreen/welcomeScreen.jsx";
 import GuessPerformer from "../GuessPerformer/guessPerformer.jsx";
 
-class App extends React.PureComponent {
-  static showGameScreen(questionIndex, props, userAnserwCallback) {
+class App extends PureComponent {
+  static getGameScreen(questionIndex, props, onUserAnswerClick) {
 
+     console.log('getGameScreen');
+     console.log(questionIndex);
+     console.log(props);
+     
     if (questionIndex === -1) {
       const minutes = props.minutes;
       const errorsCount = props.errorsCount;
 
+      console.log('WelcomeScreen need to be returned');
+
       return <WelcomeScreen
         minutes={minutes}
         errorsCount={errorsCount}
-        onStartButtonClick={userAnserwCallback}
+        onStartButtonClick={onUserAnswerClick}
       />;
     }
+ 
+    console.log('getGameScreen-2');
 
     const {questions} = props;
     const currentQuestion = questions[questionIndex];
@@ -23,12 +32,8 @@ class App extends React.PureComponent {
     switch (currentQuestion.questionType) {
       case `performer`: return <GuessPerformer
         question={currentQuestion}
-        onUserAnswer={userAnserwCallback}
-      />;
-
-      case `genre`: return <GuessPerformer
-        question={currentQuestion}
-        onUserAnswer={userAnserwCallback}
+        screenIndex={questionIndex}
+        onUserAnswer={onUserAnswerClick}
       />;
     }
 
@@ -47,7 +52,7 @@ class App extends React.PureComponent {
     const {questions} = this.props;
     const {questionIndex} = this.state;
 
-    return App.showGameScreen(questionIndex, this.props, () => {
+    return App.getGameScreen(questionIndex, this.props, () => {
       this.setState((prevState) => {
         const nextIndex = prevState.questionIndex + 1;
         const isEnd = nextIndex >= questions.length;

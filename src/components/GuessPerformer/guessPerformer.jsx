@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const GuessPerformer = (props) => {
-  const question = props.question;
-  const answers = question.answers;
+const GuessPerformer = ({question, screenIndex, onUserAnswer}) => {
+
+  const {
+    answers,
+  } = question;
 
   return (
     <section className="game game--artist">
@@ -37,13 +39,16 @@ const GuessPerformer = (props) => {
           </div>
         </div>
 
-        <form className="game__artist">
+        <form className="game__artist" onChange={(evt) => {
+          evt.preventDefault();
+          onUserAnswer(evt.target.value);
+        }}>
           {answers.map((item, i) => {
             return (
-              <div key={`answer-${i}`} className="artist">
+              <div key={`${screenIndex}-answer-${i}`} className="artist">
                 <input className="artist__input visually-hidden" type="radio" name="answer" value={`answer-${i}`} id={`answer-${i}`} />
                 <label className="artist__name" htmlFor={`answer-${i}`}>
-                  <img className="artist__picture" src={item.titleImage} alt={item.performer} />
+                  <img className="artist__picture" src={item.picture} alt={item.performer} />
                   {item.performer}
                 </label>
               </div>
@@ -56,7 +61,16 @@ const GuessPerformer = (props) => {
 };
 
 GuessPerformer.propTypes = {
-  question: PropTypes.object,
-  callback: PropTypes.func};
+  questionType: PropTypes.string,
+  question: PropTypes.shape({
+    artist: PropTypes.string,
+    answers: PropTypes.arrayOf(PropTypes.shape({
+      src: PropTypes.string,
+      performer: PropTypes.string
+    }))
+  }).isRequired,
+  screenIndex: PropTypes.number,
+  onUserAnswer: PropTypes.func
+};
 
 export default GuessPerformer;

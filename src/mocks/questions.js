@@ -2,58 +2,66 @@ const questions = [
   {
     "questionType": `performer`,
     "track": {
-      "title": `oxygene`,
-      "titleImage": `https:\\****************.jpg`,
-      "genre": `electronic`,
+      "src": `https:\\www`,      
       "performer": `Jean Michel Jarre`
     },
     "answers": [
       {
-        "title": `Dansing queen`,
-        "titleImage": `https:\\****************.jpg`,
-        "performer": `ABBA`,
-        "genre": `pop`,
+        "src": `https:\\www`,
+        "picture": `http://placehold.it/134x134`,
+        "performer": `The Alan Parsons Project`
       },
       {
-        "title": `Bohemian rhapsody`,
-        "titleImage": `https:\\****************.jpg`,
-        "performer": `QUEEN`,
-        "genre": `rock`,
+        "src": `https:\\www`,
+        "picture": `http://placehold.it/134x134`,
+        "performer": `Michael Jackson`
       },
       {
-        "title": `Pipeline`,
-        "titleImage": `https:\\****************.jpg`,
-        "performer": `The Alan Parsons project`,
-        "genre": `electronic`,
+        "src": `https:\\www`,
+        "picture": `http://placehold.it/134x134`,
+        "performer": `ABBA`
+      },
+    ]
+  },
+  {
+    "questionType": `performer`,
+    "track": {
+      "src": `https:\\www`,
+      "performer": `The Alan Parsons Project`
+    },
+    "answers": [
+      {
+        "src": `https:\\www`,
+        "picture": `http://placehold.it/134x134`,
+        "performer": `The Alan Parsons Project`
+      },
+      {
+        "src": `https:\\www`,
+        "picture": `http://placehold.it/134x134`,
+        "performer": `BI2`
+      },
+      {
+        "src": `https:\\www`,
+        "picture": `http://placehold.it/134x134`,
+        "performer": `Wolfgang Amadeus Mozart`
       },
     ]
   },
   {
     "questionType": `genre`,
-    "track": {
-      "title": `oxygene`,
-      "titleImage": `https:\\****************.jpg`,
-      "genre": `electronic`,
-      "performer": `Jean Michel Jarre`
-    },
+    "genre": `electronic`,
     "answers": [
       {
-        "title": `Dansing queen`,
-        "titleImage": `https:\\****************.jpg`,
-        "performer": `ABBA`,
-        "genre": `pop`,
+        "src": `https:\\www`,
+        "genre": `rock`
       },
       {
-        "title": `Bohemian rhapsody`,
-        "titleImage": `https:\\****************.jpg`,
-        "performer": `QUEEN`,
-        "genre": `rock`,
+        "src": `https:\\www`,
+        "genre": `pop`
       },
       {
-        "title": `Pipeline`,
-        "titleImage": `https:\\****************.jpg`,
-        "performer": `The Alan Parsons project`,
-        "genre": `electronic`,
+        "src": `https:\\www`,
+        "genre": `electronic`
       },
     ]
   },
