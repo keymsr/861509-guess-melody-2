@@ -2,7 +2,7 @@ const questions = [
   {
     "questionType": `performer`,
     "track": {
-      "src": `https:\\www`,      
+      "src": `https:\\www`,
       "performer": `Jean Michel Jarre`
     },
     "answers": [

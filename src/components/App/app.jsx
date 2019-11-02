@@ -1,21 +1,17 @@
 import React from "react";
-import {PureComponent} from "react"
+import {PureComponent} from "react";
 import PropTypes from "prop-types";
 import WelcomeScreen from "../WelcomeScreen/welcomeScreen.jsx";
 import GuessPerformer from "../GuessPerformer/guessPerformer.jsx";
+import GuessGenre from "../GuessGenre/guessGenre.jsx";
+
 
 class App extends PureComponent {
   static getGameScreen(questionIndex, props, onUserAnswerClick) {
 
-     console.log('getGameScreen');
-     console.log(questionIndex);
-     console.log(props);
-     
     if (questionIndex === -1) {
       const minutes = props.minutes;
       const errorsCount = props.errorsCount;
-
-      console.log('WelcomeScreen need to be returned');
 
       return <WelcomeScreen
         minutes={minutes}
@@ -23,8 +19,6 @@ class App extends PureComponent {
         onStartButtonClick={onUserAnswerClick}
       />;
     }
- 
-    console.log('getGameScreen-2');
 
     const {questions} = props;
     const currentQuestion = questions[questionIndex];
@@ -34,6 +28,12 @@ class App extends PureComponent {
         question={currentQuestion}
         screenIndex={questionIndex}
         onUserAnswer={onUserAnswerClick}
+      />;
+
+      case `genre`: return <GuessGenre
+        question={currentQuestion}
+        screenIndex={questionIndex}
+        onAnswer={onUserAnswerClick}
       />;
     }
 
